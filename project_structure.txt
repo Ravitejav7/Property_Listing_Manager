@@ -1,0 +1,43 @@
+.
+├── README.md
+├── package-lock.json
+├── package.json
+├── project_structure.txt
+├── sample.env
+├── tsconfig.json
+├── src
+│   ├── app.ts
+│   ├── index.ts
+│   ├── router.ts
+│   ├── controllers
+│   │   ├── auth.controller.ts
+│   │   ├── favourite.controller.ts
+│   │   └── property.controller.ts
+│   ├── helpers
+│   │   └── redis.helper.ts
+│   ├── middlewares
+│   │   └── auth.middleware.ts
+│   ├── models
+│   │   ├── property.model.ts
+│   │   └── user.model.ts
+│   ├── routes
+│   │   ├── auth.route.ts
+│   │   ├── favourite.route.ts
+│   │   └── property.route.ts
+│   ├── services
+│   │   ├── auth.service.ts
+│   │   ├── favourite.service.ts
+│   │   └── property.service.ts
+│   ├── types
+│   │   ├── auth.type.ts
+│   │   ├── express
+│   │   │   └── index.d.ts
+│   │   ├── filter.type.ts
+│   │   ├── property.type.ts
+│   │   └── user.type.ts
+│   ├── utils
+│   │   ├── auth.util.ts
+│   │   ├── db.util.ts
+│   │   └── redisClient.util.ts
+│   └── validators
+│       └── property.validator.ts
