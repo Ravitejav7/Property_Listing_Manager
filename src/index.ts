@@ -9,9 +9,11 @@ const server = createServer(app);
 
 server.listen(PORT, () => {
   try {
-    console.log(`Server is running on port ${PORT}`);
+    //console.log(`Server is running on port ${PORT}`);
     createMongoConnection();
-    console.log(`URL :  http://localhost:${PORT}/${process.env.APP_NAME}`);
+    console.log(
+      `App deployed at :  https://property-listing-manager.onrender.com/${process.env.APP_NAME}`
+    );
   } catch (error) {
     console.error("Error starting server:", error);
     process.exit(1);
