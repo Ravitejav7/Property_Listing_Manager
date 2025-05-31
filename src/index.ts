@@ -12,7 +12,7 @@ server.listen(PORT, () => {
     //console.log(`Server is running on port ${PORT}`);
     createMongoConnection();
     console.log(
-      `App deployed at :  https://property-listing-manager.onrender.com/${process.env.APP_NAME}`
+      `App deployed at :  https://property-listing-manager.onrender.com`
     );
   } catch (error) {
     console.error("Error starting server:", error);
