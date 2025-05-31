@@ -5,6 +5,18 @@
 This backend service provides functionality for managing real estate property listings, supporting full CRUD operations, advanced filtering, user authentication, favorites management, and caching for optimal performance.
 
 ---
+## 🌐 Live Deployment
+
+✅ Deployed on **Render**  
+🔗 **Live URL:**  
+[https://property-listing-manager.onrender.com](https://property-listing-manager.onrender.com)
+
+> 📌 **Base Path:** `/property-listing-system`  
+> Example public endpoint:  
+> [https://property-listing-manager.onrender.com/property-listing-system/property](https://property-listing-manager.onrender.com/property-listing-system/property)
+
+---
+
 
 ## Features
 
@@ -72,6 +84,12 @@ MONGO_DB_URL=mongodb://localhost:27017/property-listing
 MONGO_DB_NAME=hypergro
 JWT_SECRET=your_jwt_secret
 REDIS_URL=redis://localhost:6379
+
+⚠️ Redis Setup Locally
+If you want to use Redis caching locally, you must have Redis installed and running on your machine.
+Install guide: https://redis.io/docs/getting-started/
+
+If Redis is not available, caching is automatically disabled and the app works without it.
 ```
 
 ### 3. Run the Server
@@ -100,6 +118,8 @@ mongoimport --uri <MONGODB_URI> --collection properties --type csv --headerline 
 
 ## API Overview
 
+ . Base path for all routes: /property-listing-system (APP_NAME)
+
 ### Auth
 
 * `POST /auth/register` - Register a new user
@@ -118,6 +138,9 @@ mongoimport --uri <MONGODB_URI> --collection properties --type csv --headerline 
 * `POST /favorites/:propertyId` - Add to favorites
 * `DELETE /favorites/:propertyId` - Remove from favorites
 * `GET /favorites` - List user favorites
+  
+  🔐 Protected routes require JWT in the Authorization header:
+      Authorization: Bearer <your_token>
 
 ---
 
