@@ -7,7 +7,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
     res.send(
-      `Property Listing Manager API is running. Try /${process.env.APP_NAME}/property  to see data \n Note:  /${process.env.APP_NAME} is the base path for the API.`
+      `Property Listing Manager API is running. Try /${process.env.APP_NAME}/property  to see data. <br>Note:  /${process.env.APP_NAME} is the base path for the API.`
     );
 });
 //API ENTRY POINT
